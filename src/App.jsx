@@ -7,6 +7,7 @@ import Testimonial from './components/Testimonial';
 import Quote from './components/Quote';
 import Form from './components/Quoteform';
 import Services from './components/Services';
+import Footer from './components/Footer';
 function App() {
   return (
     <div>
@@ -20,8 +21,7 @@ function App() {
       <Quote />
       <Form />
       <Services />
-
-
+      <Footer />
   </div>
   );
 }
