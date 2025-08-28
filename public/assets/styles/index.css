@@ -284,7 +284,6 @@ span.next:hover {
   box-sizing: border-box;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* transparent shadow */
 }
-
 .card p {
   display: flex;       /* don't use flex on p */
   text-align: justify;
@@ -314,7 +313,6 @@ span.next:hover {
   flex-direction: column;
   padding-left: 100px;
 }
-
 .quote p {
   width: 400px;
 }
@@ -330,13 +328,11 @@ span.next:hover {
   background: #fff;
 }
 
-
 .form-container .row-left,
 .form-container .row-right {
   flex: 1;
   
 }
-
 .form-container .row-left {
   width: 250px;
   padding: 20px;
@@ -505,4 +501,281 @@ nav {
   padding: 20px 0;
   font-size: 12px;
   color: #ffffff;
+}
+
+@media (max-width: 476px) {
+.main {
+    min-height: 60vh;
+    background-image: url('/assets/images/main-bg.png');
+    background-size: cover;
+    background-position: center;
+}
+.header {
+    flex-direction: column; /* stack items */
+    align-items: center;    /* center horizontally */
+    justify-content: center;
+    text-align: center;
+  }
+
+  .logo {
+    height: 50px;   /* smaller logo */
+    width: auto;    /* keep aspect ratio */
+    margin: 10px 0;
+  }
+
+  .topnav {
+    flex-direction: column; /* stack nav links */
+    align-items: center;
+    gap: 10px; /* add space between links */
+  }
+
+  .topnav nav {
+    padding: 3px 0;
+    border: none; 
+  }
+nav a {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 14px;
+}
+.contact {
+    display: flex;
+    flex-direction: row;
+    margin-left: 0px !important;
+    margin-bottom: 10px;
+}
+ button {
+    width: 120px;
+    height: 45px;
+    font-size: 14px;
+    box-shadow: 0 10px 50px rgba(28, 54, 147, 0.5); /* lighter shadow */
+  }
+  .carousel {
+    padding: 40px 30px; /* mobile */
+  }
+    .carousel h2 {
+    font-size: 22px;
+    line-height: 1.3;
+    margin-bottom: 15px;
+    width: 300px;
+  }
+
+  .carousel p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+}
+.about-image {
+  display: none;
+}
+ .about-container {
+    min-height: 70vh;
+    padding: 40px 20px; 
+    flex-direction: column; 
+  }
+  .about {
+    grid-template-columns: 1fr; 
+    gap: 20px;
+    box-sizing: border-box;
+  }
+  .about h1 {
+    font-size: 28px;
+    width: 100%; /* remove fixed width */
+    line-height: 36px;
+  }
+
+  .about p {
+    font-size: 14px;
+    width: 100%; 
+  }
+    .slider {
+    height: 40vh; 
+    background-size: cover; 
+    background-position: center;
+    position: relative;
+  }
+    span.prev,
+  span.next {
+    height: 35vh;
+    width: 25px;
+      padding:0 15px;
+    font-size: 6px;
+  }
+  span.prev { left: 0; }
+span.next { right: 0; }
+
+  .browse {
+    height: 5vh;
+    font-size: 12px;
+  }
+
+  .testimonial {
+    grid-template-columns: 1fr;  /* single column */
+    gap: 20px;
+    text-align: center; /* center content on small screens */
+  }
+
+  .testimonial h1 {
+    font-size: 28px;
+    line-height: 1.3;
+    width: auto; /* let it shrink naturally */
+  }
+
+  .testimonial h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .testimonial p {
+    font-size: 14px;
+    width: auto; /* full width */
+    margin: 0 auto 15px auto;
+    padding: 0 15px;
+  }
+
+  .testimonials {
+    padding: 20px; 
+    gap: 10px;
+  }
+
+  .card {
+    width: 100%;      /* full width */
+    height: auto;     /* let height grow with text */
+    padding: 15px;
+  }
+
+  .card p {
+    font-size: 12px;
+    text-align: left;
+  }
+
+  .testimonial-container::after {
+    height: 80px; /* smaller fade overlay */
+    transform: translateY(20px);
+  }
+
+  .testimonial h1 {
+    font-size: 22px;
+  }
+
+  .testimonial h3 {
+    font-size: 16px;
+  }
+
+  .testimonial p {
+    font-size: 13px;
+  }
+
+  .card {
+    padding: 10px;
+  }
+
+.quote {
+    height: auto;                 /* let it size to content */
+    min-height: 35vh;             /* still gives some presence */
+    padding: 12px 8px !important;            /* compact, even padding */
+    align-items: center;          /* center content horizontally */
+    text-align: center;           /* center text */
+    background-position: center;  /* keep focal point centered */
+  }
+  .quote p {
+    width: 100%;                  /* remove fixed width on small screens */
+    max-width: 420px;             /* readable line length */
+    margin: 0 auto;               /* center the paragraph */
+  }
+.quote h1 {
+    font-size: 20px;
+  }
+
+
+  .form-container {
+    flex-direction: column;
+    width: 100%;       /* take full width */
+    margin: -80px auto auto auto; /* reset negative top margin */
+  }
+
+  .form-container .row-left,
+  .form-container .row-right {
+    width: 100%;       /* each takes full width */
+    padding: 20px;
+  }
+
+  .form-container input,
+  .form-container textarea {
+    width: 100%;       /* input fields stretch full width */
+  }
+  .services {
+    padding: 20px;
+    height: auto;
+  }
+
+  .services h3 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .services h1 {
+    font-size: 28px;
+    line-height: 32px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .services-row {
+    flex-direction: column; /* stack all */
+    width: 100%;
+    box-shadow: none; /* optional: remove big shadow */
+  }
+
+  .services-col {
+    width: 100%; /* full width */
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .services-col h4 {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+
+  .services-col p {
+    font-size: 12px;
+    margin-top: 20px;
+  }
+  .footer {
+    text-align: center;
+  }
+   .footer-content {
+    flex-direction: column;
+    text-align: center;
+    max-width: 300px;  /* keeps content centered */
+  margin: 0 auto;
+  }
+  nav {
+    flex-direction: row;
+    gap: 8px;
+    padding: 20px 20px;
+    border: none;
+  }
+  .sm-logo {
+    margin: 16px 10px;
+    height: 25px;
+  }
+.social {
+    margin-left: 0;
+    margin-top: 0px;
+    justify-content: center;
+  }
+  .bottom-nav a {
+    font-size: 10px;
+  }
+
 }

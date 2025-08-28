@@ -20,7 +20,7 @@ const Slider = () => {
     <div className="slider" style={{ backgroundImage: `url(${images[currentIndex]})` }}>
         <span className="browse">Browse Our Work</span>
       <span className="prev" onClick={prevSlide}>
-        Previous
+        Prev.
       </span>
 
       <span className="next" onClick={nextSlide}>
